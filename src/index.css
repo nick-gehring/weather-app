@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --white: #fff;
+  --white-65: rgba(255, 255, 255, 0.65);
+  --black: #000;
+  --dayLight: #116af3;
+  --dayLighter: #12b4fd;
+  --darkSky: #023660;
+  --darkSkyLighter: #2d5378;
+  --shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  --font-weight-heavy: 900;
+  --font-weight-regular: 400;
+  --text-lg: 1.5rem;
+  --max-width: 375px;
+  --border-radius: 0.5rem;
+}
+
+body {
+  background: linear-gradient(var(--dayLight) 0%, var(--dayLighter) 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinCopies {
+  0% {
+    transform: rotate(0deg) scale(-1, -1);
+  }
+  100% {
+    transform: rotate(360deg) scale(-1, -1);
+  }
+}

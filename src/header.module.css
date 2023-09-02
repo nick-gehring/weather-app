@@ -1,0 +1,60 @@
+.weatherHeader {
+  margin-bottom: 3rem;
+}
+
+.loading .weatherCity {
+  filter: blur(12px);
+}
+
+.weatherCity {
+  color: var(--white);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--text-lg);
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: var(--shadow);
+  transition: 0.5s ease filter;
+}
+
+.loading .weatherTemp {
+  filter: blur(25px);
+}
+
+.weatherTemp {
+  color: var(--white);
+  font-weight: var(--font-weight-heavy);
+  font-size: 9rem;
+  line-height: 1;
+  margin-left: 1rem;
+  text-align: center;
+  text-shadow: var(--shadow);
+  transition: 0.5s ease filter;
+}
+
+.weatherTempDegree {
+  color: var(--white);
+  font-size: 3rem;
+  position: relative;
+  vertical-align: super;
+  text-shadow: none;
+  top: -1rem;
+}
+
+.weatherIcon {
+  display: block;
+  margin: 0 auto 1rem auto;
+  width: 200px;
+  height: 200px;
+  filter: drop-shadow(var(--shadow));
+}
+
+.weatherCondition {
+  color: var(--white);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--text-lg);
+  line-height: 1;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: var(--shadow);
+  text-transform: capitalize;
+}

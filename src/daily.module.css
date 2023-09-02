@@ -1,0 +1,57 @@
+.weatherTableWrap {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: var(--border-radius);
+  height: 320px;
+  overflow-y: scroll;
+  margin-bottom: 8rem;
+}
+
+.loading.weatherTableWrap {
+  background-color: transparent;
+}
+
+.loading .weatherTableCell {
+  filter: blur(12px);
+}
+
+.weatherTableCell {
+  transition: 0.5s ease filter;
+}
+
+.weatherTableBody {
+  padding-top: 1rem;
+}
+
+.weatherTable {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.loading.weatherTable {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.weatherTable th {
+  color: var(--white-65);
+  padding-top: 1.5rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+}
+
+.weatherTable td {
+  color: var(--white);
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
+.weatherPercent {
+  font-size: 0.75rem;
+  margin-left: 0.125rem;
+  position: relative;
+}
+
+.weatherIcon {
+  height: 25px;
+  width: 25px;
+}
