@@ -7,4 +7,4 @@ I created a simple weather app to poke around React.
 Running `yarn` installs dependencies.
 Running `yarn build` builds the thing.
 
-[Read more about this project](https://nickgehring.dev/journal/weather-app/)
+[Read more about this project](https://nickgehring.dev/journal/creating-a-weather-app/)
