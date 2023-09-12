@@ -16,6 +16,7 @@
 
 .weatherTableCell {
   transition: 0.5s ease filter;
+  width: 33%;
 }
 
 .weatherTableBody {
