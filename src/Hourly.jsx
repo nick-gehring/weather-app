@@ -18,10 +18,10 @@ export default function Hourly({ weatherData }) {
                     condition={hour.weather[0].description}
                   />
                   <div className={styles.temp}>{Math.round(hour.temp)}&deg;</div>
-                  <div className={styles.precp}>{Math.round(hour.pop * 100)}%</div>
                   <div className={styles.time}>
                     {new Date(hour.dt * 1000).toLocaleTimeString([], { hour: 'numeric' })}
                   </div>
+                  <div className={styles.precp}>{Math.round(hour.pop * 100)}%</div>
                 </div>
               );
             })}
