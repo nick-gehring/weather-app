@@ -29,7 +29,7 @@ export default function Minute({ weatherData }) {
                         : Math.round(weatherData.hourly[1].temp)}
                       &deg;
                     </td>
-                    <td className={styles.weatherTableCell}>{minute.precipitation * 100}%</td>
+                    <td className={styles.weatherTableCell}>{Math.round(minute.precipitation * 100)}%</td>
                     <td className={styles.weatherTableCell}>
                       {new Date(minute.dt * 1000).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}
                     </td>
