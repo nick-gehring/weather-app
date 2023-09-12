@@ -3,6 +3,44 @@ import styles from './minute.module.css';
 export default function Minute({ weatherData }) {
   const numbers = Array.from({ length: 10 }, (_, index) => index + 1);
 
+  function precipitationToLabel(precipitation) {
+    const typeOfPrecipitation = [
+      {
+        label: 'None',
+        min: 0.0,
+        max: 0.1,
+      },
+      {
+        label: 'Slight',
+        min: 0.1,
+        max: 2.0,
+      },
+      {
+        label: 'Moderate',
+        min: 2.0,
+        max: 10.0,
+      },
+      {
+        label: 'Heavy',
+        min: 10.0,
+        max: 50.0,
+      },
+      {
+        label: 'Violent',
+        min: 50.0,
+        max: 1000,
+      },
+    ];
+
+    // find the matching precipitation type
+    let type = typeOfPrecipitation.find((type) => {
+      console.log(type, precipitation);
+      return precipitation >= type.min && precipitation < type.max;
+    });
+
+    return type.label;
+  }
+
   return (
     <>
       {weatherData ? (
@@ -11,7 +49,7 @@ export default function Minute({ weatherData }) {
             <thead className={styles.weatherTableHead}>
               <tr>
                 <th className={styles.weatherTableCell}>Temp</th>
-                <th className={styles.weatherTableCell}>Precip</th>
+                <th className={styles.weatherTableCell}>Precip Amt</th>
                 <th className={styles.weatherTableCell}>Time</th>
               </tr>
             </thead>
@@ -29,7 +67,7 @@ export default function Minute({ weatherData }) {
                         : Math.round(weatherData.hourly[1].temp)}
                       &deg;
                     </td>
-                    <td className={styles.weatherTableCell}>{Math.round(minute.precipitation * 100)}%</td>
+                    <td className={styles.weatherTableCell}>{precipitationToLabel(minute.precipitation)}</td>
                     <td className={styles.weatherTableCell}>
                       {new Date(minute.dt * 1000).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}
                     </td>
